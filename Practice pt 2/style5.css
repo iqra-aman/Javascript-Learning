@@ -1,0 +1,37 @@
+h1{
+    text-align: center;
+    color: white
+    ;
+}
+h3{
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+legend{
+    color: rgb(200, 111, 33);
+      
+}
+fieldset{
+    border-color: rgb(200, 111, 33);
+    border-radius: 50px;
+}
+option {
+    color: rgb(200, 111, 33);
+}
+#food{
+    color: rgb(200, 111, 33);
+}
+a{
+    color: white;
+}
+    
+
+.border{
+    box-sizing: 10px;
+    
+}
+a.link:hover{
+    color: rgb(200, 111, 33);
+    
+}

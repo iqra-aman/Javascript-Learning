@@ -1,0 +1,42 @@
+java script is a high level lagnuage that is machine independant
+interpreted programming language (jese hi progrram likhte hai vo on spot run hojata hai )
+java script is also object oriented programming 
+java script is also untyped language
+javascript adds a functionality
+javascript is used for validation
+validation is liye ap krte ho ke agr fist name ppucha gaya hai tou first name hi customer ya user likhe kuch aur na likh de
+java script is cas sensitive that meas capital and small c doesnt mean same
+java script can be used internal and external
+
+css agr internal hoti thi tou vo head tag ke andr
+and java jou hai body tag ke andr style tag e andr
+ aert wale bracket mein jou ap likhte ho vo as a notification show hota hai 
+
+
+
+variables and identifiers 
+variable jou hai container ki tarah jese storage box hite hain jis mein data hita hai
+to write variable u write var
+jb koi value na di hui ho tou vo undefined hota hai jese ke 
+var a;
+
+sting waali value double quotes ke andr hoti hai jese ke 
+var a="thapa technical"
+in javascript variable can be identified using unique name 
+the unique name is identifier
+
+datatyoes in java script in hindi
+what is undefined or null
+boolean ki value ya tou true ya tou false
+
+operators in js
+operators are used in  js to assign values
+ jou sign hote hain jese ke = or + inko hum operators kehte hain and jou baaki cheezien jese ke sum ya phir a b inko hum operand kehte hain
+inke combination ko hum expression kehte hain
+ arthumetic and assignment operator
+
+if statement is only used to execute some code only if a specified
+ condition is fulfilled
+
+if else statement is used to execute  a code if the condition is true or else enother code runs
+

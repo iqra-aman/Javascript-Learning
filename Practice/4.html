@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34</title>
+    <style>
+        .ok{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="ok">
+    <ul class ="language">
+        <li>javascript</li>
+    </ul>
+
+</body>
+<script>
+    function addLanguage(langName){
+        const li=document.createElement('li')
+            li.innerHTML=` ${langName}`
+            document.querySelector('.language').
+            appendChild(li)       
+    }
+    addLanguage("python")
+    addLanguage("ruby")
+    // ek aur tareeka bhi hai //
+    function addLanguage(langName){
+        const li =document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('okk')
+    //edit
+    const secLang =document.querySelector("li:nth-child(2)")
+const newLi =document.createElement('li')
+newLi.textContent ="mojo"
+secLang.replaceWith(newLi)
+
+//remove//
+const lastLang =document.querySelector('li:last-child')
+lastLang.remove()
+
+
+
+
+</script>
+</html>

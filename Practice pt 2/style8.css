@@ -1,0 +1,14 @@
+.chal{
+    padding: 20px;
+    border: 3px red solid;
+    position: relative;
+    width: 40%;
+    background-color: yellow;
+    box-sizing: border-box;
+    
+}
+
+.layout:after{
+    display: table;
+}
+    

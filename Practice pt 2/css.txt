@@ -1,0 +1,29 @@
+if we have made syntactical mistake than we go to view page source otherwise we check inspect option
+if your outpit does not come as expected check inspect 
+clip path:in which we change the shaoe of the image 
+ 
+z index use hota hai jb apne ek bos ko dusre box ke upr charhana ho 
+using media queries we tell different screen size in css
+syntax of media type is
+@media phir media type jese ke speech wagera phir hum and likh kr media feature rules likhein gae
+
+normal flow ye hai ke defaut state mein html ka layout kesa hota hai to change it we have float 
+position
+display
+layout is inline and block
+
+float property:
+[eh;e ap dsplay ko float ker do phir uss hisaab se hai ke float:right or 
+float:left
+
+a property called clear is used to to avoid the float property
+
+boxex ke darmiyaan jou gap ata hai vo ap margin se dete ho
+
+position jb absoulut ho tou vo normal flow mei nhi ati ,which means vo ek ke upr dusra box
+
+position jb fixed hoti hai tou agr ap scroll bhi kro tou vo box wahin rehta hai
+
+position sticky is a mixture of fixed and relative
+position sticky mei ya hota hai ke jb ap scroll krte ho tou ek box dusre box ke ue ajata hai
+

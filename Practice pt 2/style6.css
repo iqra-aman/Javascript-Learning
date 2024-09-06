@@ -1,0 +1,25 @@
+.circle{
+    clip-path: circle(50% at 50% 50%);
+}
+div#layer1 {
+    z-index: 5;
+    background-color: red;
+    border: 10px solid yellow;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 250px;
+    height: 120px;
+    padding: 50px;
+}
+@media not all and (orientation:landscape){
+    body{
+        color: blue;
+    }
+}
+@media screen and (width:600px){
+    body{
+        color: orange;
+    }
+     
+}

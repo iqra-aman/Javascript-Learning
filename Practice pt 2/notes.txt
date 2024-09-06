@@ -1,0 +1,28 @@
+all 8 plant move around the same orbital plan as that of sun equatorial plane calle ecliptic plane
+earth buldges at equator and flattens at poles and has an shape of oblate spheroid
+polar diameter is shorter than equatorial and polar ravity is more than equatorial
+purpose of geographic grid system is to find precise location
+north and south pole has 90 latitude 
+equator has 0
+parallel latitude:because they dont meet
+circles of latitude:because they go round the globe to form circle
+
+latitude are measured north and south of equator
+arctic circle 6.5
+antarctic circle
+tropic of cancer 
+tropic of capricon
+different latitudes arctic antarctica cancer capricon
+low latitude 
+mid latitude
+high latitude
+temperate 30 66.5
+equator 5n 5s
+tropical 23.5-23.5
+subtropical 25-30
+polar 66.5-90
+
+longitude are also called meridian or midday all the places on the same longitude have the same midday
+runs north to south and crosses latitude at 90
+measured in angular degrress east or west of prime meridian or greenwich meridian
+

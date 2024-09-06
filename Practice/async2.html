@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai and code </h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    //settimeout pr agr ap hover kro tpu timehandler ata hai jou ke callback function hai jis ka naam hona zaruri nhi hai//
+
+   // setTimeout()(function(){
+     //   console.log("iqra");
+    //},2000) // time ke baad meinkoi kam kro ga laikin ek dafa hi karo ga//
+
+const sayIqra= function(){
+    console.log("iqra");
+    
+}
+setTimeout(sayIqra,2000)
+const best= function(){
+document.querySelector('h1').innerHTML="best"}
+
+ const changeMe=setTimeout(best,2000)
+ 
+const Stop = document.querySelector('#stop')
+ addEventListener('click',function(){
+    clearTimeout(changeMe)
+    Stop.innerHTML="stoppped"
+ })
+ //if we want the changes to not occur incase we click something before 2 sec then we will use the clearTimeOut()
+
+ //first setTimeouT KO kisi variable ke andr store kr lo//
+
+
+
+    </script>
+</html>
