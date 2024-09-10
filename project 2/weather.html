@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+    
+
+}
+.card{
+    width:1100%; /*difference width and max width*/
+    max-width: 470px;
+    background:linear-gradient(135deg,#00feba,#5b548a);
+    color: white;
+    margin:100px auto 0; /*ye auto amd 0 kyu lagaya hai*/  /*auto se center hojata hai */
+    border-radius: 20px;
+    text-align: center;
+    padding: 40px 35px;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    border: 0; /*border and outline zero kyu kiya hai */
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    border-radius: 30px;
+    height: 60px;
+    font-size: 17px;
+    margin-right: 16px;
+width: 100%;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    cursor: pointer;
+    height: 60px;
+    
+}
+.search button img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+.hi{
+    background-color: black;
+}
+
+.weather{
+margin-top: 50px;;
+}
+
+.wind{
+    border-radius: 30px;
+    }
+.details{
+    display: flex; /*ye display flex se kya hota hai */
+    align-items:center;
+    justify-content:space-between;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.weather{
+    display: none;
+}
+.error{
+    text-align: left;
+    margin-left: 10px;
+
+font-size: 14px;
+margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body class="hi">
+<div class="card">
+    <div class="search">  <!-- ye div banane se boxes bnte hain ye exact use kya hota hai div ka-->
+        <input type="text" placeholder="enter city name " spellcheck="false">
+        <button><img src="weather.jpg" width="30px"></button>
+    </div>
+    <div class="error">
+        <p>invalid city name</p>
+    </div>
+    <div class="weather">
+        <img src="rain.png" width="60px" class="weathericon">
+        <h1 class="temp">22°C</h1>
+       <h2 class="city">islamabad</h2> 
+       <div class="details">
+        <div class="col">
+            <img src="humidity.png" width="60px" >
+            <div>
+                <p class="humidity">50%</p>
+                <h3>humidity</h3>
+            </div>
+        </div>
+        <div class="col">
+            <img src="wind.jpg" width="60px" class="wind">
+            <div>
+                <h3 class="wind">15km/hr</h3>
+                <h3>wind speed</h3>
+            </div>
+        </div>
+       </div>
+    </div>
+
+
+
+</div>    
+
+
+    
+</body>
+<script>
+    const apiKey="38b81f1a888b99d834da2027b5df2548";
+
+
+    const apiUrl= `https://api.openweathermap.org/data/2.5/weather `;
+
+
+const searchBox=document.querySelector(".search input");
+
+const searchBtn=document.querySelector(".search button");
+
+const weatherIcon= document.querySelector(".weathericon");
+
+
+    async function checkWeather(city){ // ye async  kya hai : jb response aye ga tb function chale ga kyu ke other wise function jldi chl jata hai //
+
+        const response = await fetch(apiUrl +city+`$appid=${apiKey}`);
+        if(response.status==404){
+            document.querySelector('.error').style.display="block"; //shuru mein koi cheez hide hogi tou baad mein show hojae gi//
+        document.querySelector('.error').style.display="block";
+        }else{
+            var data=await response.json(); //json format hai jis mein data ata hai//
+        console.log(data);
+
+document.querySelector(".city").innerHTML= data.name;
+document .querySelector(".temp").innerHTML=Math.round(data.main.temp)+"°C";
+document.querySelector(".wind").innerHTML=data.wind.speed+"km/hr"
+document.querySelector(".humidity").innerHTML=data.main.humidity +"%";
+
+// ye pictures kyu nhi lg rahi hain although ussi folder mein save ki hui hain//
+
+if(data.weather[0].main=="Clouds"){
+    weatherIcon.src="cloudy";
+}else if(data.weather[0].main=="Clear"){
+    weatherIcon.src="clear";
+}else if(data.weather[0].main=="Rain"){
+    weatherIcon.src="rain";
+}else if(data.weather[0].main=="Drizzle"){
+    weatherIcon.src="drizzle";
+}else if(data.weather[0].main=="Mist"){
+    weatherIcon.src="mist";
+}
+document.querySelector(".weather").style.display="block"
+
+        }
+
+
+
+
+
+        var data=await response.json();
+        console.log(data);
+
+document.querySelector(".city").innerHTML= data.name;
+document .querySelector(".temp").innerHTML=Math.round(data.main.temp)+"°C";
+document.querySelector(".wind").innerHTML=data.wind.speed+"km/hr"
+document.querySelector(".humidity").innerHTML=data.main.humidity +"%";
+
+if(data.weather[0].main=="Clouds"){
+    weatherIcon.src="cloudy";
+}else if(data.weather[0].main=="Clear"){
+    weatherIcon.src="clear";
+}else if(data.weather[0].main=="Rain"){
+    weatherIcon.src="rain";
+}else if(data.weather[0].main=="Drizzle"){
+    weatherIcon.src="drizzle";
+}else if(data.weather[0].main=="Mist"){
+    weatherIcon.src="mist";
+}
+document.querySelector(".weather").style.display="block"
+document.querySelector(".error").style.display="none"
+
+
+
+    }
+    searchBtn.addEventListener("click",()=>{
+        checkWeather(searchBox.value);
+    })
+        
+    checkWeather();
+</script>
+</html>
