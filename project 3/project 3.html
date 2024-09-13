@@ -13,7 +13,7 @@
     font-family: 'poppins',sans-serif;
     border: none;
 }
-.hero{
+#hero{
     background: linear-gradient(45deg, #010758,#490d61);
     min-height:  100vh;
 width: 100%;
@@ -23,14 +23,14 @@ justify-content: center;
 flex-direction: column;
 
 }
-.hero h1{
+#hero h1{
     font-size: 45px;
     font-weight: 500;
     margin-top: -50px;
     margin-bottom: 50px;
     color: white;
 }
-.hero h1 span{
+#hero h1 span{
     color:rgb(196, 90, 108);
 }
 textarea{
@@ -48,6 +48,7 @@ textarea{
     padding: 30px 40px;
     margin-bottom: 30px;
     background: #403d84;
+    color: white;
 
 }
 
@@ -56,7 +57,7 @@ font-size: 20px;
 color: white;
 font-style: italic;
 }
-.row{
+#row{
     width: 600px;
     display: flex;
     align-items: center;
@@ -85,12 +86,12 @@ select{
 }
 </style>
 <body >
-    <div class="hero">
+    <div id="hero">
     <h1>text to speech  <span>converter</span></h1>
-    <textarea placeholder="write anything here..."></textarea>
-    <div class="row">
-        <select></select>
-        <button>listen</button>
+    <textarea id="textarea" placeholder="write anything here..."></textarea>
+    <div id="row">
+        <select id="select"></select>
+        <button id="button">listen</button>
         </div>
     
 </body>
@@ -99,13 +100,13 @@ select{
 let speech= new SpeechSynthesisUtterance();
 
 let voices=[];
-let voiceSelect = document.querySelector("select");
+let voiceSelect = document.querySelector("#select");
 
 window.speechSynthesis.onvoiceschanged = () => {
     voices =window.speechSynthesis.getVoices();
     speech.voice=voices[0];
 
-    voices.forEach((voice,i) => (voiceSelect.options[i]= new option(voice.name,i)));
+    voices.forEach((voice,i) => (voiceSelect.options[i]= new Option(voice.name,i)));
 
 };
 
@@ -113,8 +114,8 @@ voiceSelect.addEventListener("change",()=>{
     speech.voice=voices[voiceSelect.value];
 })
 
-document.querySelector("button").addEventListener("click",() =>{
-    speech.text=document.querySelector("textarea").value;
+document.querySelector("#button").addEventListener("click",() =>{
+    speech.text=document.querySelector("#textarea").value;
 
 window.speechSynthesis.speak(speech);
 
